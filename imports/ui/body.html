@@ -13,7 +13,10 @@
 
                 Hide Completed Tasks
 
+
             </label>
+            {{> loginButtons}}
+            {{#if currentUser}}
 
             <form class="new-task">
 
@@ -21,6 +24,7 @@
 
             </form>
 
+            {{/if}}
         </header>
 
 

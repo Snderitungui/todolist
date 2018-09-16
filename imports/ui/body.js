@@ -1,4 +1,7 @@
 import {
+    Meteor
+} from 'meteor/meteor';
+import {
     Template
 } from "meteor/templating";
 
@@ -82,7 +85,10 @@ Template.body.events({
         Tasks.insert({
             text,
 
-            createdAt: new Date() // current time
+            createdAt: new Date(), // current time
+            owner: Meteor.userId(),
+
+            username: Meteor.user().username,
         });
 
         // Clear form
